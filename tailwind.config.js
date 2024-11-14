@@ -1,3 +1,6 @@
+
+
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -5,7 +8,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily : {
+        "poppins":["Poppins"," sans-serif"]
+      }
+    },
   },
   plugins: [
     // eslint-disable-next-line no-undef
