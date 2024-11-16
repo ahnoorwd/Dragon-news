@@ -1,7 +1,9 @@
 import { AiOutlineEye, AiFillStar, AiOutlineShareAlt } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Newscardd = (props = {}) => {
   const { news } = props || {};
+  console.log(news)
 
   return (
     <div className="card w-full bg-base-100 shadow-lg rounded-lg p-4">
@@ -43,9 +45,9 @@ const Newscardd = (props = {}) => {
       <p className="text-gray-600 text-sm mb-4 line-clamp-3">
         {news?.details || "No details available."}
       </p>
-      <a href="#" className="text-red-500 font-semibold mb-4">
+      <Link to ={`/news/${news._id}` } className="text-red-500 font-semibold mb-4">
         Read More
-      </a>
+      </Link>
 
       {/* Rating and Views */}
       <div className="flex justify-between items-center">
